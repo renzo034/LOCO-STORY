@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loren and Joco: A Story</title>
+<meta name="description" content="A short story about Loren, Joco, and a love that wasn't returned.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1b1b3a;
+    --dusk: #2d2a55;
+    --rose: #e8a0bf;
+    --sky: #8fb8de;
+    --mist: #f2eefb;
+    --soft: #c9c3e6;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--mist);
+    font-family: var(--sans);
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+  a { color: var(--rose); }
+  :focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    background:
+      radial-gradient(circle at 18% 22%, rgba(143,184,222,.28), transparent 45%),
+      radial-gradient(circle at 82% 78%, rgba(232,160,191,.28), transparent 45%),
+      var(--ink);
+  }
+  .hero-inner { max-width: 46rem; margin: 0 auto; width: 100%; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(3rem, 11vw, 6.5rem);
+    line-height: 1.02;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 .and { font-style: italic; font-weight: 400; color: var(--rose); }
+  .hero p { max-width: 34rem; color: var(--soft); margin: 0 0 2rem; }
+  .begin {
+    display: inline-block;
+    padding: .8rem 1.6rem;
+    border-radius: 999px;
+    background: var(--rose);
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .begin:hover { background: var(--mist); }
+
+  nav.chapters {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(27,27,58,.94);
+    border-bottom: 1px solid var(--dusk);
+    padding: .75rem 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  nav.chapters ul { list-style: none; margin: 0 auto; padding: 0; display: flex; gap: 1.25rem; max-width: 46rem; }
+  nav.chapters a { color: var(--soft); text-decoration: none; font-size: .95rem; }
+  nav.chapters a:hover { color: var(--rose); }
+
+  main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  article { padding: 3.5rem 0; border-bottom: 1px solid var(--dusk); scroll-margin-top: 3.5rem; }
+  article:last-of-type { border-bottom: 0; }
+  article h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 1.25rem;
+  }
+  article p { margin: 0 0 1.25rem; }
+  .chat {
+    background: var(--dusk);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .chat p { margin: 0 0 .5rem; }
+  .chat p:last-child { margin: 0; }
+  .chat .who { font-weight: 600; color: var(--sky); }
+  .chat .who.loren { color: var(--rose); }
+  blockquote {
+    margin: 2rem 0;
+    padding-left: 1.25rem;
+    border-left: 4px solid var(--rose);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.5;
+  }
+  .ending { background: var(--dusk); border-radius: 1.25rem; padding: 2rem 1.75rem; margin-top: 2rem; }
+  .ending p:last-child { margin-bottom: 0; }
+
+  footer { text-align: center; padding: 2.5rem 1.5rem 3rem; color: var(--soft); font-size: .95rem; border-top: 1px solid var(--dusk); }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Loren <span class="and">and</span> Joco</h1>
+    <p>A short story about a crush that grew quietly, a brave question, and an honest answer.</p>
+    <a class="begin" href="#chapter-1">Start reading</a>
+  </div>
+</header>
+
+<nav class="chapters" aria-label="Chapters">
+  <ul>
+    <li><a href="#chapter-1">First hello</a></li>
+    <li><a href="#chapter-2">Little things</a></li>
+    <li><a href="#chapter-3">The question</a></li>
+    <li><a href="#chapter-4">The answer</a></li>
+    <li><a href="#chapter-5">After</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <article id="chapter-1">
+    <h2>The first hello</h2>
+    <p>Loren did not plan to notice Joco. It was an ordinary Monday, an ordinary classroom, and a seat that just happened to be empty beside the window.</p>
+    <p>Joco sat down, smiled, and said hello like it was the easiest thing in the world. Loren said hello back a little too late, and the whole day felt different after that.</p>
+    <p>Joco was funny without trying to be. Joco listened with full attention, laughed with the whole face, and never made anyone feel small. By Friday, Loren was already looking forward to Monday.</p>
+  </article>
+
+  <article id="chapter-2">
+    <h2>Little things</h2>
+    <p>Weeks passed. They shared lunches, shared playlists, and shared the long walk home when the rain came without warning.</p>
+    <div class="chat" role="group" aria-label="Chat messages">
+      <p><span class="who">Joco:</span> Did you eat yet?</p>
+      <p><span class="who loren">Loren:</span> Not yet. Waiting for you.</p>
+      <p><span class="who">Joco:</span> Haha, you're the best. Save me a seat.</p>
+    </div>
+    <p>Loren kept every message. A small joke. A photo of a sunset. A voice note that ended with Joco laughing at their own story. To Joco, these were friendly moments. To Loren, each one was a quiet reason to hope.</p>
+    <p>Somewhere between the rain and the playlists, Loren understood what the feeling was. Loren had fallen for Joco.</p>
+  </article>
+
+  <article id="chapter-3">
+    <h2>The question</h2>
+    <p>Loren practiced the words many times and never said them the same way twice. Every version sounded too small or too loud.</p>
+    <p>Joco was easy to be around, and that made it harder. If the answer was no, Loren might lose the best friendship of the year. If Loren said nothing, the feeling would only get heavier.</p>
+    <blockquote>"I would rather be honest and scared than quiet and wondering."</blockquote>
+    <p>So one evening, on the bench behind the school where they always talked, Loren took a breath and told Joco the truth: <em>I like you. More than a friend.</em></p>
+  </article>
+
+  <article id="chapter-4">
+    <h2>The answer</h2>
+    <p>Joco did not laugh. Joco did not look away. For a long moment, Joco simply sat with the words, and then spoke gently.</p>
+    <div class="chat" role="group" aria-label="Conversation">
+      <p><span class="who">Joco:</span> Loren, thank you for telling me. I know that took courage.</p>
+      <p><span class="who">Joco:</span> I'm gay, and I like boys. I can't feel for you the way you hoped, and I don't want to pretend I can.</p>
+      <p><span class="who loren">Loren:</span> I understand.</p>
+      <p><span class="who">Joco:</span> You matter to me. I just can't give you what you're asking for.</p>
+    </div>
+    <p>It hurt. Of course it hurt. Loren's eyes stung, and the bench suddenly felt very quiet.</p>
+    <p>But beneath the ache, Loren noticed something else. Joco had been kind and honest, and nobody had been tricked. Being turned down was painful. Being lied to would have been worse.</p>
+  </article>
+
+  <article id="chapter-5">
+    <h2>After</h2>
+    <p>The next few days were awkward. Loren kept some distance, and Joco respected it without asking why.</p>
+    <p>Slowly, the hurt got lighter. Loren learned that liking someone is never a mistake, even when the answer is no. Joco learned that a hard conversation can still be a respectful one.</p>
+    <div class="ending">
+      <p>Loren did not get the love story hoped for. Loren got something quieter: the courage to say what was true, and an honest answer in return.</p>
+      <p>Some stories end with a kiss. This one ends with two people learning how to be honest with each other.</p>
+      <p><em>The end.</em></p>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <p>A story of Loren and Joco. Written with care.</p>
+</footer>
+
+</body>
+</html>
